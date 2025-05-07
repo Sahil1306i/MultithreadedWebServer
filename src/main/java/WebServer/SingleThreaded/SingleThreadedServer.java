@@ -24,6 +24,11 @@ public class SingleThreadedServer {
             BufferedReader fromClient = new BufferedReader(new InputStreamReader(acceptedConnection.getInputStream()));
             toClient.println("Hello from the server");
 
+            // closing all the connections
+            toClient.close();
+            fromClient.close();
+            acceptedConnection.close();
+
             break;
         }
     }

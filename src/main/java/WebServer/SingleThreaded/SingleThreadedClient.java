@@ -19,6 +19,11 @@ public class SingleThreadedClient {
         toSocket.println("Hello from the client"); // this is sent on the socket from the client side
         String line = fromSocket.readLine();
         System.out.println("Response from the socket is:"+line);
+
+        // closing the sockets
+        toSocket.close();
+        fromSocket.close();
+        socket.close();
     }
 
     public static void main(String[] args) {
