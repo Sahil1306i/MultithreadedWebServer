@@ -11,6 +11,7 @@ public class MultiThreadedServer  {
     public Consumer<Socket> getConsumer (){
         return (clientSocket)->{
             try {
+                System.out.println("Accepted connection from " + clientSocket.getInetAddress());
                 PrintWriter toSocket = new PrintWriter(clientSocket.getOutputStream(), true);
                 toSocket.println("Hello from server " + clientSocket.getInetAddress());
                 clientSocket.close();
