@@ -29,7 +29,7 @@ public class SingleThreadedServer {
             fromClient.close();
             acceptedConnection.close();
 
-            break;
+
         }
     }
     public static void main(String[] args) {
